@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reproduzir Música</title>
+</head>
+<body>
+
+<button id="playButton">Reproduzir Música</button>
+
+<audio id="izaac">
+  <source src="What's New Scooby-Doo Intro HD.mp3" type="audio/mp3">
+  Seu navegador não suporta o elemento de áudio.
+</audio>
+
+<script>
+ 
+  const playButton = document.getElementById('playButton');
+  const myAudio = document.getElementById('izaac');
+
+
+  playButton.addEventListener('click', function() {
+  
+    if (myAudio.paused) {
+      myAudio.play();
+      playButton.textContent = 'Pausar Música';
+    } else {
+      myAudio.pause();
+      playButton.textContent = 'Reproduzir Música';
+    }
+  });
+</script>
+
+</body>
+</html>
+
+
